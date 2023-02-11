@@ -1,0 +1,475 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+body {
+    background-color: #1f1d2c;
+    font-family: 'Inter', sans-serif;
+}
+:root {
+    --yellow: #f1a600;
+    --dark: #1f1d2c;
+    --lightdark: #242635;
+    --grey: #e5e5e5;
+    --white: #ffffff;
+}
+@media (min-width: 320px){
+    /*NAVEGACION*/
+    .nav ul li:hover{
+        color: #f1a600;
+    }
+    .nav{
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+        margin-bottom: 20px;
+    }
+    .nav button {
+        border: none;
+        background-color: transparent;
+        padding-right: 40px;
+    }
+    .nav button i {
+        color: var(--yellow);
+        font-size: 28px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .nav button i:hover {
+        rotate: 180deg;
+    }
+    .nav__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 40px;
+        background-color: var(--yellow);
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: 100%;
+        overflow-y: auto;
+        left: 100%;
+        z-index: 10;
+        transition: 0.3s;
+    }
+    .nav__menu__item {
+        line-height: 60px;
+        list-style: none;
+    }
+    .nav__menu__link:hover, .nav__menu__link__active {
+        color: var(--violet);
+    }
+    .nav__toggle {
+        display: block;
+    }
+    .nav__link {
+        text-decoration: none;
+        color: var(--dark_grey);
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .nav__menu__visible {
+        left: 0;
+    }
+    /*HEADER*/
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .header__text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    .header__text h1{
+        color: #ffffff;
+        font-size: 50px;
+        width: 300px;
+    }
+    .header__text p:nth-child(2) { 
+        color: #ffffff;
+        margin-left: 15%;
+        margin-bottom: 10%;
+        width: 200px;
+        font-size: 18px;
+        text-align: left;
+    }
+    .header__text2{
+        margin-left: 15%;
+        text-align: left;
+        margin-bottom: 25px;
+    }
+    .yellow{
+        color: #f1a600;
+    }
+    .white{
+        color: #ffffff;
+    }
+    .icon{
+        display: flex;
+        color: #f1a600;
+        width: 24px;
+        height: 24px;
+        gap: 35px;
+        width: 100%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 25px;
+        font-size: 28px;
+        align-items: center;
+    }
+    .image img{
+        display: flex;
+        width: 250px;
+        margin-bottom: 35px;
+    }
+    .square{
+        display: flex;
+        width: 70%;
+        height: 750px;
+        background-color: #242635;
+        position: absolute;
+        z-index: -1;
+        bottom: 40%;
+        left: 30%;
+    }
+    /*ACERCA DE MI*/
+    .about{
+        width: 100%;
+        max-height:max-content;
+        background-color: #242635;
+        display: flex;
+        padding-bottom: 45px;
+    }
+    .about__text{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 35px;
+        width: 60%;
+        color: #e5e5e5;
+        text-align: center;
+    }
+    .about__text h2{
+        margin-bottom: 25px;
+        font-size: 30px;
+    }
+    .about__text p{
+        margin-bottom: 5px;
+    }
+    .about__icons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .about__icons h3{
+        margin-top: 15%;
+        color: #e5e5e5;
+    }
+    .about__icons h4{
+        color: grey;
+    }
+    .uvm{
+        margin-top: 30px;
+        width: 250px;
+        height: 250px;
+        text-align: center;
+    }
+    .academlo{
+        width: 250px;
+        height: 250px;
+        text-align: center;
+    }
+    .academlo h3, h4{
+        margin-top: 10px;
+    }
+     /*EXPERIENCIA*/
+    .experience{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        color: white;
+        width: 100%;
+    }
+    .experience__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        gap: 30px;
+    }
+    .experience h2{
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 30px;
+    }
+    .amazon,
+    .airbnb,
+    .google {
+        display: flex;
+        gap: 15%;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        margin-left: 10%;
+        height: 120px;
+    }
+    .amazon h4,
+    .airbnb h4,
+    .google h4{
+        opacity: 0.5;
+    }
+    .amazon h5,
+    .airbnb h5,
+    .google h5{
+        opacity: 0.5;
+    }
+    .amazon__icon,
+    .airbnb__icon,
+    .google__icon {
+        display: flex;
+        align-items: center;
+        font-size: 100px;
+        width: 122px;
+        height: 122px;
+    }   
+    .amazon__text,
+    .airbnb__text,
+    .google__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    /*HABILIDADES*/
+    .skills{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill__bigbox{
+        position: relative;    
+    }
+    .skill__box{
+        margin-top: 40px;
+        width: 70%;
+        height: 500px;
+        background-color: #242635;
+        position: absolute;
+        z-index: -1;
+        left: 0px;
+    }
+    .skill1,
+    .skill2,
+    .skill3,
+    .skill4{
+        display: flex;
+        justify-content: flex-start;
+        gap: 25px;
+        align-items: center;
+    }
+    .text__box h3{
+        color:#f1a600;
+        font-size: 40px;
+        padding: 20px;
+    } 
+    .text__box h2{
+        color: white;
+        text-align: center;
+        margin-top: 90px;
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+    .text__box h4{
+        color: white;
+        display: flex;
+        line-height: 40px;
+        font-size: 15px;
+        margin-left: 40px;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    /*PORTAFOLIO*/
+    .porfolio{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    .porfolio a:hover{
+        cursor: pointer;
+    }
+    .porfolio h2{
+        text-align: center;
+        color: #e5e5e5;
+        font-size: 30px;
+        margin-bottom: 45px;
+    }
+    .porfolio__container{
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .porfolio__container1,
+    .porfolio__container2,
+    .porfolio__container3{
+        position: relative;
+    }
+    .porfolio__container1:hover,
+    .porfolio__container2:hover,
+    .porfolio__container3:hover{
+        -webkit-transform:scale(1.3);transform:scale(1.3);
+    }
+    .porfolio__container img{
+        height: 250px;
+        width: 300px;
+    }
+    .back1{
+        background-color: var(--yellow);
+        height: 240px;
+        width: 340px;
+        position: absolute;
+        z-index: -1;
+        left:-20px;
+        bottom: 40px;       
+    }
+    .back2{
+        background-color: var(--lightdark);
+        height: 240px;
+        width: 340px;
+        position: absolute;
+        z-index: -1;
+        left:-20px;
+        bottom: 40px;         
+    }
+    .back3{
+        background-color: var(--yellow);
+        height: 240px;
+        width: 340px;
+        position: absolute;
+        z-index: -1;
+        left:-20px;
+        bottom: 40px;       
+    }/*CONTACTO*/
+    .contact{
+        width: auto;
+        max-height: max-content;
+        padding-bottom: 25px;
+        background-color: #242635;
+    }
+    .contact h2{
+        color:#e5e5e5;
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+    .contact__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact__container__icon{
+        display: flex;
+        gap: 50px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon1,
+    .icon2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .icon1 i,
+    .icon2 i{
+        font-size: 60px;
+        color: #f1a600;
+    }
+    .icon1 h4,
+    .icon2 h4{
+        color: #e5e5e5;
+    }
+    .icon1 p,
+    .icon2 p {
+        color: grey;
+    }
+    .contact__container__icon a:hover{
+        cursor: pointer;
+    }
+    /*FOOTER*/
+    footer{
+        margin-top: 50px;
+        color: #e5e5e5;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}
+@media (min-width: 576px){
+}
+@media (min-width: 768px){
+    .nav__toggle {
+        display: none;
+    }
+    .nav__menu{
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        position: inherit;
+        background-color: inherit;
+        gap: 15px;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .nav__menu li{
+        color: #ffffff;
+    }
+    .nav__menu li a{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+    .skill__box{
+        width: 50%;        
+    }
+}
+@media (min-width: 992px){
+    .nav__menu li a{
+        font-size: 18px;
+    }
+    .header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 150px;
+        margin-bottom: 100px;
+    }
+    .image img{
+        width: 350px;
+    }
+
+    
+    
+}
